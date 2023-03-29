@@ -4,16 +4,13 @@ phases:
     commands: 
       - "echo Build started on `date`"
       - "echo Building the Docker image..."
-      - "docker build -t dvohra/node-server ."
-      - "docker tag dvohra/node-server dvohra/node-server:latest"
+      - "docker build -t docker-test-repo  ."
+      - "docker tag docker-test-repo:latest 257290997232.dkr.ecr.us-east-1.amazonaws.com/docker-test-repo:latest"
   post_build: 
     commands: 
       - "echo Build completed on `date`"
       - "echo Pushing the Docker image..."
-      - "docker push dvohra/node-server:latest"
-  pre_build: 
-    commands: 
-      - "echo Logging in to Docker Hub..."
-      - "docker login --username=\"dvohra\" --password=\"password\""
+      - "docker push 257290997232.dkr.ecr.us-east-1.amazonaws.com/docker-test-repo:latest"
+ 
 version: 0.1
 
