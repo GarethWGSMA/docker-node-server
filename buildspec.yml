@@ -4,7 +4,7 @@ phases:
     commands: 
       - "echo Build started on `date`"
       - "echo Building the Docker image..."
-      - "sudo systemctl start docker"
+      - "systemctl start docker"
       - "docker build -t docker-test-repo  ."
       - "docker tag docker-test-repo:latest 257290997232.dkr.ecr.us-east-1.amazonaws.com/docker-test-repo:latest"
   post_build: 
