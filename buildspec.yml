@@ -1,3 +1,5 @@
+version: 0.1
+phases:
   build: 
     commands: 
       - "echo Build started on `date`"
@@ -9,5 +11,5 @@
       - "echo Build completed on `date`"
       - "echo Pushing the Docker image..."
       - "docker push 257290997232.dkr.ecr.us-east-1.amazonaws.com/docker-test-repo:latest"
-  version: 0.1
+ 
 
