@@ -1,8 +1,8 @@
 
   build: 
     commands: 
-      - echo Logging into ECR
-      - $ (aws ecr get-login --no-include-email --region $AWS_DEFAULT_REGION)
+      - "echo Logging into ECR"
+      - "$ (aws ecr get-login --no-include-email --region $AWS_DEFAULT_REGION)"
       - "echo Build started on `date`"
       - "echo Building the Docker image..."
       - "echo -Put line here to checkif docjker is running"
