@@ -1,8 +1,6 @@
 
   build: 
     commands: 
-      - "echo Logging into ECR"
-      - "aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 257290997232.dkr.ecr.us-east-1.amazonaws.com"
       - "echo Build started on `date`"
       - "echo Building the Docker image..."
       - "echo -Put line here to checkif docjker is running"
@@ -12,6 +10,8 @@
     commands: 
       - "echo Build completed on `date`"
       - "echo Pushing the Docker image..."
+      - "echo Logging into ECR"
+      - "aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 257290997232.dkr.ecr.us-east-1.amazonaws.com"
       - "docker push 257290997232.dkr.ecr.us-east-1.amazonaws.com/docker-test-repo:latest"
       
 version: 0.1
