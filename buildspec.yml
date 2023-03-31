@@ -1,14 +1,11 @@
---- 
-phases:
-  pre-build:
-    commands:
-      - echo Logging into ECR
-      - $ (aws ecr get-login --no-include-email --region $AWS_DEFAULT_REGION)
+---       
   build: 
     commands: 
+      - echo Logging into ECR
+      - $ (aws ecr get-login --no-include-email --region $AWS_DEFAULT_REGION)
       - "echo Build started on `date`"
       - "echo Building the Docker image..."
-      - "echo systemctl start docker"
+      - "echo -Put line here to checkif docjker is running"
       - "docker build -t docker-test-repo  ."
       - "docker tag docker-test-repo:latest 257290997232.dkr.ecr.us-east-1.amazonaws.com/docker-test-repo:latest"
   post_build: 
