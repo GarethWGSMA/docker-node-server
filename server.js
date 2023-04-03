@@ -2,7 +2,7 @@ var http = require('http');
 var handleRequest = function (request, response) {
   response.writeHead(200);
   
-  response.end('Testing a NLB can deal with changing IP addresses');
+  response.end('Another new task');
   
 };
 var www = http.createServer(handleRequest);
