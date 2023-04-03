@@ -2,7 +2,7 @@ var http = require('http');
 var handleRequest = function (request, response) {
   response.writeHead(200);
   
-  response.end('Can we kill ll other tasks, once we deploy from github ?');
+  response.end('Testing a NLB can deal with changing IP addresses');
   
 };
 var www = http.createServer(handleRequest);
