@@ -2,7 +2,7 @@ var http = require('http');
 var handleRequest = function (request, response) {
   response.writeHead(200);
   
-  response.end('Another new task111212323');
+  response.end('Test NLB');
   
 };
 var www = http.createServer(handleRequest);
