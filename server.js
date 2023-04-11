@@ -2,7 +2,7 @@ var http = require('http');
 var handleRequest = function (request, response) {
   response.writeHead(200);
   
-  response.end('should auto update NLB');
+  response.end('is this still working');
   
 };
 var www = http.createServer(handleRequest);
